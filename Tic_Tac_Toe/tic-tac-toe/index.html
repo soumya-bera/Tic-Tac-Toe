@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Welcome Section -->
+    <header id="welcome">
+      <h1>Welcome to Soumya's TIC TAC TOE Game</h1>
+      <p class="disclaimer">
+        Disclaimer: This game is for fun only. No scores are stored, and performance may vary depending on your device.
+      </p>
+    </header>
+
+    <!-- Menu Section -->
+    <div id="menu">
+      <button class="menu-btn" onclick="showSection('friends')">🎮 Play in offline</button>
+      <button class="menu-btn" onclick="showSection('computer')">🤖 Play with Computer</button>
+      <button class="menu-btn" onclick="showSection('online')">🌍 Play in Online</button>
+    </div>
+
+    <!-- Game Sections -->
+    <div id="friends" class="game-section" style="display:none;">
+      <h2>Play in offline</h2>
+      <div class="board" id="board-friends"></div>
+      <p id="status-friends"></p>
+      <button class="action-btn" onclick="restartGame('friends')">Restart</button>
+      <button class="back-btn" onclick="goBack()">Back to Menu</button>
+    </div>
+
+    <div id="computer" class="game-section" style="display:none;">
+      <h2>Play with Computer</h2>
+      <div class="board" id="board-computer"></div>
+      <p id="status-computer"></p>
+      <button class="action-btn" onclick="restartGame('computer')">Restart</button>
+      <button class="back-btn" onclick="goBack()">Back to Menu</button>
+    </div>
+
+    <div id="online" class="game-section" style="display:none;">
+      <h2>Play in Online</h2>
+      <div class="board" id="board-online"></div>
+      <p id="status-online"></p>
+      <button class="action-btn" onclick="restartGame('online')">Restart</button>
+      <button class="back-btn" onclick="goBack()">Back to Menu</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
